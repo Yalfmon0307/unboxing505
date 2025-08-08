@@ -7,7 +7,7 @@ const PricingSection = () => {
       type: "Marítimo",
       icon: Ship,
       duration: "25-35 días",
-      price: "$8.50",
+      price: "$2.50",
       unit: "por libra",
       features: [
         "Hasta 50 lbs por caja",
@@ -22,7 +22,7 @@ const PricingSection = () => {
       type: "Aéreo",
       icon: Plane,
       duration: "5-7 días",
-      price: "$12.00",
+      price: "$7.00",
       unit: "por libra",
       features: [
         "Hasta 50 lbs por caja",
@@ -39,7 +39,7 @@ const PricingSection = () => {
     <section className="py-20 bg-[#10121a]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#ffd600]">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#dfae47]">
             Nuestras Tarifas
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -51,16 +51,16 @@ const PricingSection = () => {
           {pricingPlans.map((plan, index) => {
             const IconComponent = plan.icon;
             return (
-              <div key={index} className="relative overflow-hidden border-2 border-[#ffd600] bg-[#181a23] hover:shadow-xl transition-all duration-300 group rounded-xl">
-                <div className={`absolute top-0 left-0 w-full h-1 ${index === 0 ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-[#ffd600]'}`}></div>
+              <div key={index} className="relative overflow-hidden border-2 border-[#dfae47] bg-[#181a23] hover:shadow-xl transition-all duration-300 group rounded-xl">
+                <div className={`absolute top-0 left-0 w-full h-1 ${index === 0 ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-[#dfae47]'}`}></div>
                 <div className="text-center pb-4 pt-6">
                   <div className="flex justify-center mb-4">
-                    <div className={`w-16 h-16 rounded-full ${index === 0 ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-[#ffd600]'} flex items-center justify-center shadow-lg`}>
+                    <div className={`w-16 h-16 rounded-full ${index === 0 ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-[#dfae47]'} flex items-center justify-center shadow-lg`}>
                       <IconComponent className={`w-8 h-8 ${index === 0 ? 'text-white' : 'text-[#10121a]'}`} />
                     </div>
                   </div>
                   <div className="flex justify-center mb-2">
-                    <span className="border border-[#ffd600] text-[#ffd600] px-3 py-1 rounded-full text-sm font-semibold bg-[#10121a]">{plan.badge}</span>
+                    <span className="border border-[#dfae47] text-[#dfae47] px-3 py-1 rounded-full text-sm font-semibold bg-[#10121a]">{plan.badge}</span>
                   </div>
                   <div className="text-2xl font-bold text-white mb-1">
                     Envío {plan.type}
@@ -72,13 +72,13 @@ const PricingSection = () => {
                 </div>
                 <div className="text-center pb-6">
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-[#ffd600]">{plan.price}</span>
+                    <span className="text-4xl font-bold text-[#dfae47]">{plan.price}</span>
                     <span className="text-gray-300 ml-2">{plan.unit}</span>
                   </div>
                   <ul className="space-y-3">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center justify-center gap-3 text-gray-300">
-                        <Package className="w-4 h-4 text-[#ffd600] flex-shrink-0" />
+                        <Package className="w-4 h-4 text-[#ffe066] flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
